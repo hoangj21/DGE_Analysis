@@ -28,3 +28,4 @@ data_T <- function(thresVal) {
   in_range_data <- data_with_sums[data_with_sums$gene_count_sums >= thresVal,]
   return (in_range_data)
 }
+
