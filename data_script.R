@@ -16,7 +16,8 @@ TIL_16HR_data <- data.frame(data$TIL_16HR_M38_TIL_16HR_1, data$TIL_16HR_M38_TIL_
 
 #compiled data set with only numeric column types (i.e. )
 all_data <- data.frame(BL_UNTR_data, BL_16HR_data, TIL_UNTR_data, TIL_16HR_data)
-gene_count_sums <- rowSums(all_data) #sums each gene's total counts across all samples
+#vector with sums of each gene's total counts across all samples
+gene_count_sums <- rowSums(all_data) 
 
 #compiled data set with gene expression sum counts attached
 data_with_sums <- data.frame(data$Ensembol_id, all_data, gene_count_sums)
